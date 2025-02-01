@@ -1,65 +1,31 @@
-# Project Title
+# Actuator Control Project
 
 A brief description of what your project does and who it is for.
 
-## Table of Contents
+## System Components
 
-- [About the Project](#about-the-project)
-- [Features](#features)
-- [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [License](#license)
-- [Contact](#contact)
+### Actuator Class
 
-## About the Project
+- prepare(): Initialize/reset the system
 
-Provide a high-level overview of the project. Explain its purpose, target audience, and any key benefits.
+- set_current(): Thread-safe current adjustment
 
-## Features
+- get_position(): Real-time position calculation
 
-- Feature 1
-- Feature 2
-- Feature 3
+- shutdown(): Emergency current cutoff
 
-## Installation
+### Monitoring Thread
+Continuously displays:
 
-### Prerequisites
-List any dependencies or prerequisites required before installation.
+- Current input value
 
-\`\`\`sh
-# Example: Install Node.js
-npm install -g node
-\`\`\`
+- Calculated position
 
-### Steps
-1. Clone the repository
-   \`\`\`sh
-   git clone https://github.com/your-username/project-name.git
-   \`\`\`
-2. Navigate to the project directory
-   \`\`\`sh
-   cd project-name
-   \`\`\`
-3. Install dependencies
-   \`\`\`sh
-   npm install
-   \`\`\`
+- System status updates
 
-## Usage
+### Safety Features
 
-Provide examples of how to run and use your project.
-
-\`\`\`sh
-npm start
-\`\`\`
-
-Or if it's a library:
-
-\`\`\`js
-const myLibrary = require('my-library');
-myLibrary.doSomething();
-\`\`\`
+Automatic shutdown timer (3s error timeout)
 
 ## Contributing
 
@@ -77,5 +43,5 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contact
 
-Your Name – [your-email@example.com](mailto:your-email@example.com)  
-GitHub: [your-username](https://github.com/your-username)
+Your Name – [hongweiz.usa@gmail.com](mailto:hongweiz.usa@gmail.com)  
+
